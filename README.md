@@ -6,3 +6,6 @@ email account for twitch bot: hugbot69@gmail.com
 
 ##### Status update #1
 created bot and made it connect to twitch. Next step to add functionality
+
+##### ToDO
+09/02/2020: add commands to bot, try to make them cute with global emotes when possible

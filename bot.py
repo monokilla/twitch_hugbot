@@ -10,7 +10,7 @@ async def event_ready():
     print(f"{os.environ['BOT_NICK']} is online!")
 
     ws = bot._ws
-    await ws.send_privmsg(os.environ['CHANNEL'], f"/me has landed!")
+    await ws.send_privmsg(os.environ['CHANNEL'], f"/me has arrived and ready for the feels!")
 
 @bot.event
 async def event_message(ctx):
@@ -20,7 +20,26 @@ async def event_message(ctx):
     if ctx.author.name.lower() == os.environ['BOT_NICK'].lower():
         return 
     
+    await bot.handle_commands(ctx)
+
+    if 'hello' in ctx.content.lower():
+        await ctx.channel.send(f"Hi, @{ctx.author.name}!")
+
+    
     #await ctx.channel.send(ctx.content)
+
+@bot.command(name='givehug')
+async def hug(ctx):
+    await ctx.send('GivePLZ You are loved!')
+
+@bot.command(name='headpat')
+async def headpat(ctx):
+    await ctx.send('FBBlock Pat, pat, it will be ok fren')  
+
+@bot.command(name='snuggle')
+async def snuggle(ctx):
+    await ctx.send('')   
+
 
 
 
