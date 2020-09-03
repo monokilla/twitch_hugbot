@@ -8,4 +8,7 @@ email account for twitch bot: hugbot69@gmail.com
 created bot and made it connect to twitch. Next step to add functionality
 
 ##### ToDO
-09/02/2020: add commands to bot, try to make them cute with global emotes when possible
+09/02/2020: 
+add commands to bot, snuggle, daily affirmations. Try to make them cute with global emotes when possible
+add cooldowns to bot
+add function to able to tag chat people
